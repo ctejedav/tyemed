@@ -1,0 +1,29 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+<section id="table-section">
+            <table class="table table-striped table-bordered pretty">
+                <thead>
+                    <tr>
+                        <th><%= sortable "name", "Company Name" %></th>
+                        <th><%= sortable "address", "Company Address" %></th>
+                        <th><%= sortable "active", "Active" %></th>
+                        <th colspan="3">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% @companies.each do |company| %>
+                      <tr>
+                          <td><%= company.name %></td>
+                          <td><%= company.address %></td>
+                          <td><%= company.active == 1? "Yes" : "No"  %></td>
+                          <td><%= link_to 'Show', company %></td>
+                          <td><%= link_to 'Edit', edit_company_path(company) %></td>
+                          <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                      </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </section
+<br>
+<%= will_paginate @companies, renderer: BootstrapPagination::Rails, previous_label: "Older", next_label: "Newer" %>

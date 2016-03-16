@@ -1,31 +1,28 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+    <h1>Listing Companies</h1>
+      <%= form_tag companies_path, :method => 'get', :id => "companies_search", remote: true do %>
+  <p>
+    Download:
+    <% @linkcsv = export_companies_path(:method => 'export' , format: "csv") %>
+    <%= hidden_field_tag :linkcsv, @linkcsv %>
+    <% @linkxls= export_companies_path(:method => 'export' , format: "xls") %>
+    <%= hidden_field_tag :linkxls, @linkxls %>
+    
+    <%= link_to "CSV", export_companies_path(:method => 'export' , format: "csv"), :id => "companies_csv" %> |
+    <%= link_to "XLS", export_companies_path(:method => 'export', format: "xls"), :id => "companies_xls" %>
+    </p>  
+ 
 
-<h1>Listing Companies</h1>
+    <p>
+      <%= text_field_tag :search, params[:search], :id => "search_field" %>
+      <%= submit_tag "Search", :name => nil, :id => "search" %>
+    </p>
+    <div id="companies"><%= render 'companies' %></div> 
+  <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Active</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+   
 
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td><%= company.address %></td>
-        <td><%= company.active %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+        
 <br>
-
-<%= link_to 'New Company', new_company_path %>
+<%= link_to 'New Company', new_company_path, class: 'btn btn-primary' %>

@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function() {
+    $('#search').change(function() {
+      var newurl = $('#search').val();
+      $('#companies_csv').attr('href', newurl);
+    });
+});

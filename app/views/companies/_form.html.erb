@@ -1,4 +1,5 @@
-<%= form_for(@company) do |f| %>
+
+<%= form_for(@company, remote: false) do |f| %>
   <% if @company.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
@@ -13,17 +14,35 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :active %><br>
-    <%= f.number_field :active %>
+    <% if @company.new_record? 
+           @par = true     
+      else   
+          if @company.active == 1
+            @par = true 
+          else
+            @par = false
+          end
+     end 
+    %>
+    <%= f.check_box :active, {checked: @par} %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%
+      if @company.new_record?
+        @text = "Create Company"
+      else
+        @text = "Update Company"
+      end
+    %>   
+    <%= f.submit @text, class: 'btn btn-primary' %>
   </div>
+
 <% end %>

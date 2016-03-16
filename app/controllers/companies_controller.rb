@@ -1,12 +1,24 @@
 class CompaniesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_company, only: [:show, :edit, :update, :destroy]
-
+  helper_method :sort_column, :sort_direction
+  
+  
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.all
+    @per_pages = 10
+    @companies = Company.search(params[:search]).order(sort_column + ' ' + sort_direction).paginate(page: params[:page], per_page: @per_pages)
   end
 
+  def export
+    @companies = Company.search(params[:search]).order(sort_column + ' ' + sort_direction)
+    respond_to do |format|
+      format.csv { send_data @companies.to_csv }
+      format.xls
+    end
+  end
+  
   # GET /companies/1
   # GET /companies/1.json
   def show
@@ -30,9 +42,11 @@ class CompaniesController < ApplicationController
       if @company.save
         format.html { redirect_to @company, notice: 'Company was successfully created.' }
         format.json { render :show, status: :created, location: @company }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @company.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -44,9 +58,11 @@ class CompaniesController < ApplicationController
       if @company.update(company_params)
         format.html { redirect_to @company, notice: 'Company was successfully updated.' }
         format.json { render :show, status: :ok, location: @company }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @company.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -58,6 +74,7 @@ class CompaniesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to companies_url, notice: 'Company was successfully destroyed.' }
       format.json { head :no_content }
+      format.js
     end
   end
 
@@ -71,4 +88,14 @@ class CompaniesController < ApplicationController
     def company_params
       params.require(:company).permit(:name, :address, :active)
     end
+    
+    def sort_column
+       Company.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+  
+    def sort_direction
+       %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+     end
+     
+   
 end
