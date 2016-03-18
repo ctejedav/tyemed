@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @lead.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @lead.last_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @lead.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @lead.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @lead.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @lead.state %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @lead.county %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @lead.zip_code %>
+</p>
+
+<p>
+  <strong>Est age:</strong>
+  <%= @lead.est_age %>
+</p>
+
+<p>
+  <strong>Birth month:</strong>
+  <%= @lead.birth_month %>
+</p>
+
+<p>
+  <strong>Est income:</strong>
+  <%= @lead.est_income %>
+</p>
+
+<%= link_to 'Edit', edit_lead_path(@lead) %> |
+<%= link_to 'Back', leads_path %>

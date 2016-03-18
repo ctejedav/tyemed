@@ -37693,3 +37693,479 @@ Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.
 
 Started GET "/assets/application.self-d0605748d4a532d9b0f8beb24d5388600a7efd4bfaabc9efc5c990828bd3869c.js?body=1" for 192.168.1.228 at 2016-03-17 11:38:17 -0400
 Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.1.228 at 2016-03-17 17:13:57 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5.2) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5.2) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.2) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateLeads (20160317211125)
+  [1m[35m (207.1ms)[0m  CREATE TABLE `leads` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `address` varchar(255), `city` varchar(255), `state` varchar(255), `county` varchar(255), `zip_code` varchar(255), `est_age` int(11), `birth_month` int(11), `est_income` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160317211125')
+  [1m[36m (49.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tyemed'
+  AND fk.table_name = 'companies'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `companies`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tyemed'
+  AND fk.table_name = 'leads'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `leads`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tyemed'
+  AND fk.table_name = 'states'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `states`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tyemed'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.6ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/" for 192.168.1.228 at 2016-03-17 17:20:41 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by HomeController#index as HTML
+Redirected to http://192.168.1.65:3000/users/sign_in
+Completed 302 Found in 105ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.228 at 2016-03-17 17:20:41 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (34.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (320.3ms)
+Completed 200 OK in 1828ms (Views: 1763.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-2c456e1cbde8d237c511a13527c01b263ff76a4a57020dec96fc613f0b39ca90.css?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/companies.self-2f13a9fe6df0705464908cb6c55d66356335136f20a9518230fc3affaa266039.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/leads.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/states.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d0605748d4a532d9b0f8beb24d5388600a7efd4bfaabc9efc5c990828bd3869c.js?body=1" for 192.168.1.228 at 2016-03-17 17:20:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/leads" for 192.168.1.228 at 2016-03-17 17:20:49 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LeadsController#index as HTML
+  [1m[36mLead Load (1.0ms)[0m  [1mSELECT `leads`.* FROM `leads`[0m
+  Rendered leads/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 390ms (Views: 375.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/leads/new" for 192.168.1.228 at 2016-03-17 17:22:58 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LeadsController#new as HTML
+Completed 401 Unauthorized in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.228 at 2016-03-17 17:22:58 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 155ms (Views: 132.9ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users/sign_in" for 192.168.1.228 at 2016-03-17 17:23:13 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BY5VbRsdR4+oLYVoHy4mdSAXAFtj3GVmdLO2r8V1LoVN5fMXzc/+M/vtphYCYuoUrKTQ/XaId51L13zzyA/sGQ==", "user"=>{"email"=>"cosme@tye.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cosme@tye.net'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2016-03-17 19:33:44', `current_sign_in_at` = '2016-03-17 21:23:14', `sign_in_count` = 13, `updated_at` = '2016-03-17 21:23:14' WHERE `users`.`id` = 2
+  [1m[36m (26.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.65:3000/leads/new
+Completed 302 Found in 380ms (ActiveRecord: 31.9ms)
+
+
+Started GET "/leads/new" for 192.168.1.228 at 2016-03-17 17:23:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LeadsController#new as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered leads/_form.html.erb (35.9ms)
+  Rendered leads/new.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 298ms (Views: 248.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/leads/new" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LeadsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 401 Unauthorized in 13ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/leads/new" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LeadsController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (15.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 235ms (Views: 231.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-2c456e1cbde8d237c511a13527c01b263ff76a4a57020dec96fc613f0b39ca90.css?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/companies.self-2f13a9fe6df0705464908cb6c55d66356335136f20a9518230fc3affaa266039.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/leads.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/states.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d0605748d4a532d9b0f8beb24d5388600a7efd4bfaabc9efc5c990828bd3869c.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:15 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/sign_in" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (15.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 164ms (Views: 160.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-2c456e1cbde8d237c511a13527c01b263ff76a4a57020dec96fc613f0b39ca90.css?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/companies.self-2f13a9fe6df0705464908cb6c55d66356335136f20a9518230fc3affaa266039.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/leads.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/states.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d0605748d4a532d9b0f8beb24d5388600a7efd4bfaabc9efc5c990828bd3869c.js?body=1" for 192.168.1.228 at 2016-03-18 08:50:19 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/sign_in" for 192.168.1.228 at 2016-03-18 08:58:22 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VE7bqnsvJTZ1Is/QcsK6FzN/KCF1xt5J37B/E8uV1ge7SdNFulgBre97MSPs6UrfVUyHhOxaIkKVHJEG0RTaiA==", "user"=>{"email"=>"cosme@tye.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cosme@tye.net'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2016-03-17 21:23:14', `current_sign_in_at` = '2016-03-18 12:58:22', `sign_in_count` = 14, `updated_at` = '2016-03-18 12:58:22' WHERE `users`.`id` = 2
+  [1m[36m (35.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.65:3000/leads/new
+Completed 302 Found in 241ms (ActiveRecord: 38.0ms)
+
+
+Started GET "/leads/new" for 192.168.1.228 at 2016-03-18 08:58:22 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LeadsController#new as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered leads/_form.html.erb (17.0ms)
+  Rendered leads/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 226ms (Views: 218.5ms | ActiveRecord: 1.1ms)
