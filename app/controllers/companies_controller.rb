@@ -19,6 +19,11 @@ class CompaniesController < ApplicationController
     end
   end
   
+  def import
+    Company.import(params[:file])
+    redirect_to companies_path, notice: "Companies Imported!!"
+  end
+  
   # GET /companies/1
   # GET /companies/1.json
   def show

@@ -26,3 +26,10 @@
         
 <br>
 <%= link_to 'New Company', new_company_path, class: 'btn btn-primary' %>
+
+<h2>Import Companies</h2>
+
+<%= form_tag import_companies_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>

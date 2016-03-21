@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :companies do
     collection do
        get 'export'
+       post 'import'
     end
   end
  

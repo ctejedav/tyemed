@@ -38169,3 +38169,1029 @@ Processing by LeadsController#new as HTML
   Rendered leads/_form.html.erb (17.0ms)
   Rendered leads/new.html.erb within layouts/application (19.6ms)
 Completed 200 OK in 226ms (Views: 218.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 192.168.1.228 at 2016-03-18 11:27:36 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+Redirected to http://192.168.1.65:3000/users/sign_in
+Completed 302 Found in 95ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.228 at 2016-03-18 11:27:36 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (41.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (176.5ms)
+Completed 200 OK in 970ms (Views: 912.8ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/users/sign_in" for 192.168.1.228 at 2016-03-18 11:27:44 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YePApEGSYNdK5du8WQBN08o1fc1G8vdPL/WRGThR81YvHtUvvgEGSb683/rxNADkY6vOfKX9ZR/ol5BV5YspbQ==", "user"=>{"email"=>"cosme@tye.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cosme@tye.net'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2016-03-18 15:02:31', `current_sign_in_at` = '2016-03-18 15:27:45', `current_sign_in_ip` = '192.168.1.228', `sign_in_count` = 21, `updated_at` = '2016-03-18 15:27:45' WHERE `users`.`id` = 2
+  [1m[36m (35.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.65:3000/
+Completed 302 Found in 344ms (ActiveRecord: 38.6ms)
+
+
+Started GET "/" for 192.168.1.228 at 2016-03-18 11:27:45 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://192.168.1.65:3000/companies
+Completed 302 Found in 12ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/companies" for 192.168.1.228 at 2016-03-18 11:27:45 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.2ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0
+  Rendered companies/_companies.html.erb (70.7ms)
+  Rendered companies/index.html.erb within layouts/application (90.3ms)
+Completed 200 OK in 321ms (Views: 292.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/companies" for 192.168.1.228 at 2016-03-18 11:29:54 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered companies/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms)
+
+SyntaxError (/home/ctejeda/tyemed/app/views/companies/index.html.erb:32: syntax error, unexpected tLABEL
+....append=  form_tag , multipart: true do @output_buffer.safe_...
+...                               ^
+/home/ctejeda/tyemed/app/views/companies/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/companies/index.html.erb:32: syntax error, unexpected tLABEL
+  app/views/companies/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.9ms)
+
+
+Started GET "/companies" for 192.168.1.228 at 2016-03-18 11:32:10 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCompany Load (1.2ms)[0m  [1mSELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  Rendered companies/_companies.html.erb (31.0ms)
+  Rendered companies/index.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 329ms (Views: 255.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/assets/application.self-2c456e1cbde8d237c511a13527c01b263ff76a4a57020dec96fc613f0b39ca90.css?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/companies.self-2f13a9fe6df0705464908cb6c55d66356335136f20a9518230fc3affaa266039.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/leads.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/states.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d0605748d4a532d9b0f8beb24d5388600a7efd4bfaabc9efc5c990828bd3869c.js?body=1" for 192.168.1.228 at 2016-03-18 11:32:11 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/companies/import" for 192.168.1.228 at 2016-03-18 11:32:31 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound (The action 'import' could not be found for CompaniesController):
+  actionpack (4.2.5.2) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5.2) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5.2) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.5.2) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.5.2) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5.2) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5.2) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5.2) lib/action_dispatch/routing/route_set.rb:815:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5.2) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.2) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.8ms)
+
+
+Started GET "/" for 192.168.1.207 at 2016-03-18 11:41:41 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+Redirected to http://192.168.1.65:3000/users/sign_in
+Completed 302 Found in 95ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.207 at 2016-03-18 11:41:42 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (19.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (109.0ms)
+Completed 200 OK in 810ms (Views: 759.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/companies.self-2f13a9fe6df0705464908cb6c55d66356335136f20a9518230fc3affaa266039.js?body=1" for 192.168.1.207 at 2016-03-18 11:41:43 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/leads.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.207 at 2016-03-18 11:41:43 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/states.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.207 at 2016-03-18 11:41:43 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/sign_in" for 192.168.1.207 at 2016-03-18 11:41:51 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZ5/bJQIDBb5Sc4YuC1hGc/qd+ir3cFmAdN9kA/xpgb4iXt78HLPqd/3WGBm5r2LkUaG52pkzn6cWm7hJxpDuQ==", "user"=>{"email"=>"cosme@tye.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cosme@tye.net'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2016-03-18 15:27:45', `current_sign_in_at` = '2016-03-18 15:41:51', `last_sign_in_ip` = '192.168.1.228', `current_sign_in_ip` = '192.168.1.207', `sign_in_count` = 22, `updated_at` = '2016-03-18 15:41:51' WHERE `users`.`id` = 2
+  [1m[36m (33.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.65:3000/
+Completed 302 Found in 325ms (ActiveRecord: 35.9ms)
+
+
+Started GET "/" for 192.168.1.207 at 2016-03-18 11:41:51 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://192.168.1.65:3000/companies
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/companies" for 192.168.1.207 at 2016-03-18 11:41:51 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0
+  Rendered companies/_companies.html.erb (68.3ms)
+  Rendered companies/index.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 354ms (Views: 326.1ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/companies/import" for 192.168.1.207 at 2016-03-18 11:45:17 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zya+g/V13J5RlgQgyejMlnBrmNaX+zLkO2GveZyHGYlQseada/9tpbYjU3VB42Ya55vQzJOg+zthxxh7eQetog==", "file"=>#<ActionDispatch::Http::UploadedFile:0x000000043a5170 @tempfile=#<Tempfile:/tmp/RackMultipart20160318-942-12zfupb.csv>, @original_filename="companies.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"companies.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">, "commit"=>"Import"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.3ms)
+
+NameError (uninitialized constant CompaniesController::Companies):
+  app/controllers/companies_controller.rb:23:in `import'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.0ms)
+
+
+Started GET "/companies" for 192.168.1.207 at 2016-03-18 11:46:38 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCompany Load (0.8ms)[0m  [1mSELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  Rendered companies/_companies.html.erb (16.4ms)
+  Rendered companies/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 167ms (Views: 128.0ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/companies/import" for 192.168.1.207 at 2016-03-18 11:46:46 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WMcLs17jSVijwU13s+YGOvf1PczRuPGCzD7Ypr9UYvZvUFOtwGn4Y0R0GiI77ay2YAV11tXjOF2WmG+kWtTW3Q==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fbcf90629b8 @tempfile=#<Tempfile:/tmp/RackMultipart20160318-942-1vy1081.csv>, @original_filename="companies.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"companies.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">, "commit"=>"Import"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.2ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'Name' for Company.):
+  app/models/company.rb:24:in `block in import'
+  app/models/company.rb:23:in `import'
+  app/controllers/companies_controller.rb:23:in `import'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (42.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.3ms)
+
+
+Started GET "/companies" for 192.168.1.207 at 2016-03-18 11:48:12 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0
+  Rendered companies/_companies.html.erb (12.8ms)
+  Rendered companies/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 226ms (Views: 217.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/companies/export.csv?method=export" for 192.168.1.207 at 2016-03-18 11:48:24 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#export as CSV
+  Parameters: {"method"=>"export"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.0ms)[0m  SELECT `companies`.* FROM `companies`  ORDER BY name asc
+  Rendered text template (0.1ms)
+Sent data  (20.6ms)
+Completed 200 OK in 35ms (Views: 20.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/companies/import" for 192.168.1.207 at 2016-03-18 11:49:04 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A1Jfp9RerBFQW7K6mFtLsRrXsyTzIKl2e8IA2lHFJiQ0xQe5StQdKrfu5e8QUOE9jSf7Pvd7YKkhZLfYtEWSDw==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00000004ba2328 @tempfile=#<Tempfile:/tmp/RackMultipart20160318-942-18zbkti.csv>, @original_filename="companies.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"companies.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">, "commit"=>"Import"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 01', 'Address 01', 1, '2016-03-18 15:49:04', '2016-03-18 15:49:04')[0m
+  [1m[35m (50.0ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 02', 'Address 02', 1, '2016-03-18 15:49:04', '2016-03-18 15:49:04')
+  [1m[36m (26.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 03', 'Address 03', 1, '2016-03-18 15:49:04', '2016-03-18 15:49:04')[0m
+  [1m[35m (18.2ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 04', 'Address 04', 1, '2016-03-18 15:49:04', '2016-03-18 15:49:04')
+  [1m[36m (18.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 05', 'Address 05', 1, '2016-03-18 15:49:04', '2016-03-18 15:49:04')[0m
+  [1m[35m (18.1ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 06', 'Address 06', 1, '2016-03-18 15:49:04', '2016-03-18 15:49:04')
+  [1m[36m (18.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 07', 'Address 07', 1, '2016-03-18 15:49:04', '2016-03-18 15:49:04')[0m
+  [1m[35m (18.2ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 08', 'Address 08', 1, '2016-03-18 15:49:04', '2016-03-18 15:49:04')
+  [1m[36m (18.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.65:3000/companies
+Completed 302 Found in 252ms (ActiveRecord: 196.5ms)
+
+
+Started GET "/companies" for 192.168.1.207 at 2016-03-18 11:49:04 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCompany Load (1.1ms)[0m  [1mSELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `companies`
+  Rendered companies/_companies.html.erb (23.4ms)
+  Rendered companies/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 243ms (Views: 233.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/companies?page=2&_=1458316253815" for 192.168.1.207 at 2016-03-18 11:49:10 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as JS
+  Parameters: {"page"=>"2", "_"=>"1458316253815"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.0ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 10
+  Rendered companies/_companies.html.erb (13.1ms)
+  Rendered companies/index.js.erb (43.4ms)
+Completed 200 OK in 71ms (Views: 62.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/companies?_=1458316253816&page=1" for 192.168.1.207 at 2016-03-18 11:49:13 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as JS
+  Parameters: {"_"=>"1458316253816", "page"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `companies`[0m
+  Rendered companies/_companies.html.erb (21.5ms)
+  Rendered companies/index.js.erb (33.8ms)
+Completed 200 OK in 59ms (Views: 49.9ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/companies/import" for 192.168.1.207 at 2016-03-18 12:11:02 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EaN6kctgJ0KAcGFw8cV28kjFhgQETB9d7gHT5qE0FVEmNCKPVeqWeWfFNiV5ztx+3zXOHgAX1oK0p2TkRLSheg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fbcf4ee7ce0 @tempfile=#<Tempfile:/tmp/RackMultipart20160318-942-1f25m6a.csv>, @original_filename="companies.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"companies.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">, "commit"=>"Import"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Completed 401 Unauthorized in 13ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/companies" for 192.168.1.207 at 2016-03-18 12:11:02 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.207 at 2016-03-18 12:11:02 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (16.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 253ms (Views: 247.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.1.207 at 2016-03-18 12:11:09 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AKYVzBoMuUVZlypjDth1W2EVRnGzJu6mLj/to5A9cZ8LkjRMvcybB/bCORuv3F4lQQG29T7CAzAOzZm4VgQS+g==", "user"=>{"email"=>"cosme@tye.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cosme@tye.net'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2016-03-18 15:41:51', `current_sign_in_at` = '2016-03-18 16:11:10', `last_sign_in_ip` = '192.168.1.207', `sign_in_count` = 23, `updated_at` = '2016-03-18 16:11:10' WHERE `users`.`id` = 2[0m
+  [1m[35m (31.6ms)[0m  COMMIT
+Redirected to http://192.168.1.65:3000/companies
+Completed 302 Found in 246ms (ActiveRecord: 34.3ms)
+
+
+Started GET "/companies" for 192.168.1.207 at 2016-03-18 12:11:10 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.2ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `companies`[0m
+  Rendered companies/_companies.html.erb (22.6ms)
+  Rendered companies/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 241ms (Views: 231.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/companies/import" for 192.168.1.207 at 2016-03-18 12:11:16 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AxrG+rZ86DyLapT+8tn54fGJdSRbrTEeptJCXOdAQc0l8KKK7E3obx2YqHrPCgGqrL8AFL/F+a3Ubo06mcCbsw==", "commit"=>"Import"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.1ms)
+
+NoMethodError (undefined method `path' for nil:NilClass):
+  app/models/company.rb:23:in `import'
+  app/controllers/companies_controller.rb:23:in `import'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.3ms)
+
+
+Started POST "/companies/import" for 192.168.1.207 at 2016-03-18 12:11:34 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AxrG+rZ86DyLapT+8tn54fGJdSRbrTEeptJCXOdAQc0l8KKK7E3obx2YqHrPCgGqrL8AFL/F+a3Ubo06mcCbsw==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fbcf4db8fe0 @tempfile=#<Tempfile:/tmp/RackMultipart20160318-942-styvt6.csv>, @original_filename="companies.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"companies.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">, "commit"=>"Import"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 01', 'Address 01', 1, '2016-03-18 16:11:34', '2016-03-18 16:11:34')[0m
+  [1m[35m (35.9ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 02', 'Address 02', 1, '2016-03-18 16:11:34', '2016-03-18 16:11:34')
+  [1m[36m (18.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 03', 'Address 03', 1, '2016-03-18 16:11:34', '2016-03-18 16:11:34')[0m
+  [1m[35m (34.9ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 04', 'Address 04', 1, '2016-03-18 16:11:34', '2016-03-18 16:11:34')
+  [1m[36m (26.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 05', 'Address 05', 1, '2016-03-18 16:11:34', '2016-03-18 16:11:34')[0m
+  [1m[35m (18.2ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 06', 'Address 06', 1, '2016-03-18 16:11:34', '2016-03-18 16:11:34')
+  [1m[36m (18.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 07', 'Address 07', 1, '2016-03-18 16:11:34', '2016-03-18 16:11:34')[0m
+  [1m[35m (18.1ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `companies` (`name`, `address`, `active`, `created_at`, `updated_at`) VALUES ('Company 08', 'Address 08', 1, '2016-03-18 16:11:34', '2016-03-18 16:11:34')
+  [1m[36m (18.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.65:3000/companies
+Completed 302 Found in 253ms (ActiveRecord: 198.4ms)
+
+
+Started GET "/companies" for 192.168.1.207 at 2016-03-18 12:11:34 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCompany Load (1.1ms)[0m  [1mSELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `companies`
+  Rendered companies/_companies.html.erb (21.9ms)
+  Rendered companies/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 227ms (Views: 218.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/companies" for 192.168.1.207 at 2016-03-18 12:19:52 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `companies`[0m
+  Rendered companies/_companies.html.erb (22.9ms)
+  Rendered companies/index.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 251ms (Views: 241.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.self-2c456e1cbde8d237c511a13527c01b263ff76a4a57020dec96fc613f0b39ca90.css?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/companies.self-2f13a9fe6df0705464908cb6c55d66356335136f20a9518230fc3affaa266039.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/leads.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/states.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d0605748d4a532d9b0f8beb24d5388600a7efd4bfaabc9efc5c990828bd3869c.js?body=1" for 192.168.1.207 at 2016-03-18 12:19:53 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/companies?page=2&_=1458318102699" for 192.168.1.207 at 2016-03-18 12:19:57 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as JS
+  Parameters: {"page"=>"2", "_"=>"1458318102699"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCompany Load (1.0ms)[0m  [1mSELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 10[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `companies`
+  Rendered companies/_companies.html.erb (24.1ms)
+  Rendered companies/index.js.erb (36.6ms)
+Completed 200 OK in 62ms (Views: 53.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/companies?_=1458318102700&page=3" for 192.168.1.207 at 2016-03-18 12:19:57 -0400
+Cannot render console from 192.168.1.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as JS
+  Parameters: {"_"=>"1458318102700", "page"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (0.9ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 20
+  Rendered companies/_companies.html.erb (14.5ms)
+  Rendered companies/index.js.erb (25.6ms)
+Completed 200 OK in 52ms (Views: 43.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 192.168.1.228 at 2016-03-18 12:37:40 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 401 Unauthorized in 48ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 192.168.1.228 at 2016-03-18 12:37:41 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+Redirected to http://192.168.1.65:3000/users/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.228 at 2016-03-18 12:37:41 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (16.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 182ms (Views: 177.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.1.228 at 2016-03-18 12:37:47 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SvuMfS4cCNQ7hRa8/+cspqz038LNfBshbiYRBZTCBex/CjSxSy/p6xr/BNSKl9RKuXiChR9uZ6E2GwTTQAo8RA==", "user"=>{"email"=>"cosme@tye.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'cosme@tye.net'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2016-03-18 16:11:10', `current_sign_in_at` = '2016-03-18 16:37:47', `current_sign_in_ip` = '192.168.1.228', `sign_in_count` = 24, `updated_at` = '2016-03-18 16:37:47' WHERE `users`.`id` = 2
+  [1m[36m (32.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.65:3000/
+Completed 302 Found in 239ms (ActiveRecord: 34.6ms)
+
+
+Started GET "/" for 192.168.1.228 at 2016-03-18 12:37:47 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://192.168.1.65:3000/companies
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/companies" for 192.168.1.228 at 2016-03-18 12:37:47 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.2ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `companies`[0m
+  Rendered companies/_companies.html.erb (39.6ms)
+  Rendered companies/index.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 264ms (Views: 245.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/companies/export.csv?method=export" for 192.168.1.228 at 2016-03-18 12:38:14 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#export as CSV
+  Parameters: {"method"=>"export"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCompany Load (1.3ms)[0m  [1mSELECT `companies`.* FROM `companies`  ORDER BY name asc[0m
+  Rendered text template (0.1ms)
+Sent data  (1.7ms)
+Completed 200 OK in 25ms (Views: 1.3ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/companies/import" for 192.168.1.228 at 2016-03-18 12:39:28 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cwvQkZQwcMWGCUkkU4xlRAtcmaSKPm5pWhLC6wNYZuuPhDzTcry5yOUpHjJTRH1I0fyT9ODFJYPfIlgV6FVwJA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fbcf97ac9a8 @tempfile=#<Tempfile:/tmp/RackMultipart20160318-942-1pzi1c0.xlsx>, @original_filename="cosme_test.xlsx", @content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"cosme_test.xlsx\"\r\nContent-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\r\n">, "commit"=>"Import"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.1ms)
+
+ArgumentError (invalid byte sequence in UTF-8):
+  app/models/company.rb:23:in `import'
+  app/controllers/companies_controller.rb:23:in `import'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.4ms)
+
+
+Started GET "/companies" for 192.168.1.228 at 2016-03-18 12:39:49 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM `companies`[0m
+  Rendered companies/_companies.html.erb (22.4ms)
+  Rendered companies/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 234ms (Views: 225.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self-2c456e1cbde8d237c511a13527c01b263ff76a4a57020dec96fc613f0b39ca90.css?body=1" for 192.168.1.228 at 2016-03-18 12:39:49 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/companies.self-2f13a9fe6df0705464908cb6c55d66356335136f20a9518230fc3affaa266039.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/leads.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/states.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d0605748d4a532d9b0f8beb24d5388600a7efd4bfaabc9efc5c990828bd3869c.js?body=1" for 192.168.1.228 at 2016-03-18 12:39:50 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/companies?page=2&_=1458319193611" for 192.168.1.228 at 2016-03-18 12:39:53 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as JS
+  Parameters: {"page"=>"2", "_"=>"1458319193611"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCompany Load (1.1ms)[0m  [1mSELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 10[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `companies`
+  Rendered companies/_companies.html.erb (23.7ms)
+  Rendered companies/index.js.erb (35.9ms)
+Completed 200 OK in 62ms (Views: 53.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/companies?_=1458319193612&page=3" for 192.168.1.228 at 2016-03-18 12:39:55 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as JS
+  Parameters: {"_"=>"1458319193612", "page"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (0.9ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 20
+  Rendered companies/_companies.html.erb (12.3ms)
+  Rendered companies/index.js.erb (23.0ms)
+Completed 200 OK in 49ms (Views: 40.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/companies?_=1458319193613&page=1" for 192.168.1.228 at 2016-03-18 12:39:58 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as JS
+  Parameters: {"_"=>"1458319193613", "page"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.0ms)[0m  SELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `companies`[0m
+  Rendered companies/_companies.html.erb (23.0ms)
+  Rendered companies/index.js.erb (35.2ms)
+Completed 200 OK in 61ms (Views: 51.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/companies?utf8=%E2%9C%93&linkcsv=%2Fcompanies%2Fexport.csv%3Fmethod%3Dexport&linkxls=%2Fcompanies%2Fexport.xls%3Fmethod%3Dexport&search=c&direction=&sort=&_=1458319193614" for 192.168.1.228 at 2016-03-18 12:40:00 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as JS
+  Parameters: {"utf8"=>"✓", "linkcsv"=>"/companies/export.csv?method=export", "linkxls"=>"/companies/export.xls?method=export", "search"=>"c", "direction"=>"", "sort"=>"", "_"=>"1458319193614"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCompany Load (1.1ms)[0m  [1mSELECT  `companies`.* FROM `companies` WHERE (name LIKE '%c%')  ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `companies` WHERE (name LIKE '%c%')
+  Rendered companies/_companies.html.erb (26.4ms)
+  Rendered companies/index.js.erb (39.9ms)
+Completed 200 OK in 66ms (Views: 56.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/companies?utf8=%E2%9C%93&linkcsv=%2Fcompanies%2Fexport.csv%3Fmethod%3Dexport&linkxls=%2Fcompanies%2Fexport.xls%3Fmethod%3Dexport&search=co&direction=&sort=&_=1458319193615" for 192.168.1.228 at 2016-03-18 12:40:02 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as JS
+  Parameters: {"utf8"=>"✓", "linkcsv"=>"/companies/export.csv?method=export", "linkxls"=>"/companies/export.xls?method=export", "search"=>"co", "direction"=>"", "sort"=>"", "_"=>"1458319193615"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT  `companies`.* FROM `companies` WHERE (name LIKE '%co%')  ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `companies` WHERE (name LIKE '%co%')[0m
+  Rendered companies/_companies.html.erb (26.8ms)
+  Rendered companies/index.js.erb (39.1ms)
+Completed 200 OK in 65ms (Views: 55.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/companies?utf8=%E2%9C%93&linkcsv=%2Fcompanies%2Fexport.csv%3Fmethod%3Dexport&linkxls=%2Fcompanies%2Fexport.xls%3Fmethod%3Dexport&search=cos&direction=&sort=&_=1458319193616" for 192.168.1.228 at 2016-03-18 12:40:03 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as JS
+  Parameters: {"utf8"=>"✓", "linkcsv"=>"/companies/export.csv?method=export", "linkxls"=>"/companies/export.xls?method=export", "search"=>"cos", "direction"=>"", "sort"=>"", "_"=>"1458319193616"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCompany Load (0.8ms)[0m  [1mSELECT  `companies`.* FROM `companies` WHERE (name LIKE '%cos%')  ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  Rendered companies/_companies.html.erb (8.1ms)
+  Rendered companies/index.js.erb (18.2ms)
+Completed 200 OK in 44ms (Views: 35.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/companies" for 192.168.1.228 at 2016-03-18 12:40:42 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCompany Load (0.9ms)[0m  [1mSELECT  `companies`.* FROM `companies`  ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `companies`
+  Rendered companies/_companies.html.erb (23.0ms)
+  Rendered companies/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 188ms (Views: 142.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.self-2c456e1cbde8d237c511a13527c01b263ff76a4a57020dec96fc613f0b39ca90.css?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/companies.self-2f13a9fe6df0705464908cb6c55d66356335136f20a9518230fc3affaa266039.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/leads.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/states.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d0605748d4a532d9b0f8beb24d5388600a7efd4bfaabc9efc5c990828bd3869c.js?body=1" for 192.168.1.228 at 2016-03-18 12:40:43 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/companies/import" for 192.168.1.228 at 2016-03-18 12:40:49 -0400
+Cannot render console from 192.168.1.228! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompaniesController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5//ZVd46O1mA6b8MUr/UxL/Orh8jK8uI6wpdkHRz1EQbcDUXOLbyVOPJ6BpSd8zIZW6kT0nQgGJuOsdun37Ciw==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fbcf47fab30 @tempfile=#<Tempfile:/tmp/RackMultipart20160318-942-1421r4a.xlsx>, @original_filename="cosme_test.xlsx", @content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"cosme_test.xlsx\"\r\nContent-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\r\n">, "commit"=>"Import"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms)
+
+ArgumentError (invalid byte sequence in UTF-8):
+  app/models/company.rb:23:in `import'
+  app/controllers/companies_controller.rb:23:in `import'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (44.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (132.0ms)
